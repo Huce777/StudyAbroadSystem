@@ -1,0 +1,127 @@
+/* style6.css */
+body {
+    background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), 
+                url('../images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    height: 100vh;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, '微软雅黑', 'Microsoft YaHei', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+	letter-spacing: 0.1px;
+    color: #333;
+}
+
+.unsw-container {
+    position: absolute;
+    top: 52%;
+    right: 19%;
+    transform: translateY(-50%);
+    width: 310px;
+    background: rgba(255,255,255,0.97);
+    border-radius: 14px;
+    box-shadow: 0 10px 35px rgba(28, 54, 93, 0.15);
+    padding: 25px 30px;
+}
+
+.header-group {
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+.campus-logo {
+    width: 65px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #1B365D;
+    font-size: 1.4rem;
+    margin: 0 0 10px 0;
+    line-height: 1.35;
+}
+
+.decision-stats {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.stat-card {
+    background: linear-gradient(145deg, #F8FAFF, #FFFFFF);
+    padding: 1.4rem;
+    border-radius: 10px;
+    border: 1px solid #E3ECFF;
+    position: relative;
+}
+
+.stat-card.critical {
+    background: #FFF2F3;
+    border-color: #FFE3E5;
+}
+
+.stat-value {
+    display: block;
+    color: #1B365D;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.dual-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.indicator-bar {
+    height: 4px;
+    background: #FF5A5F;
+    border-radius: 2px;
+    margin-top: 1.2rem;
+}
+
+.program-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #F8FAFF;
+    border-radius: 8px;
+    margin: 0.8rem 0;
+}
+
+.notice-board {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #F0F4FF;
+}
+
+.notice-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.date {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+	html {
+        font-size: 15px;
+    }
+    .anu-container {
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 85%;
+		padding: 25px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

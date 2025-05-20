@@ -1,0 +1,131 @@
+/* style5.css */
+body {
+    background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), 
+                url('../images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    height: 100vh;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, '微软雅黑', 'Microsoft YaHei', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+	letter-spacing: 0.1px;
+    color: #333;
+}
+
+.sydney-container {
+    position: absolute;
+    top: 48%;
+    right: 16%;
+    transform: translateY(-50%);
+    width: 340px;
+    background: rgba(255,255,255,0.98);
+    border-radius: 15px;
+    box-shadow: 0 12px 40px rgba(0, 61, 122, 0.18);
+    padding: 28px;
+}
+
+.header-group {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.campus-logo {
+    width: 70px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    color: #1A356E;
+    font-size: 1.5rem;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+.application-stats {
+    display: grid;
+    gap: 1.2rem;
+    margin: 2rem 0;
+}
+
+.stat-item {
+    padding: 1.5rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.stat-item.primary {
+    background: linear-gradient(145deg, #F8FAFF, #FFFFFF);
+    border: 1px solid #E3ECFF;
+}
+
+.stat-item.secondary {
+    background: #FFF5E6;
+    border: 1px solid #FFE8CC;
+}
+
+.stat-value {
+    display: block;
+    color: #1A356E;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.progress-bar {
+    height: 6px;
+    background: #4A90E2;
+    border-radius: 3px;
+    margin-top: 1rem;
+}
+
+/* 添加供应商前缀 */
+.progress-bar {
+    background: -webkit-linear-gradient(left, #4A90E2, #1A356E);
+    background: linear-gradient(to right, #4A90E2, #1A356E);
+}
+
+.faculty-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #F8F9FF;
+    border-radius: 8px;
+    margin: 0.8rem 0;
+}
+
+.urgent-case {
+    margin-top: 2rem;
+    border-top: 2px solid #F0F4FF;
+    padding-top: 1.5rem;
+}
+
+.case-item {
+    background: #FFEDED;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.deadline {
+    color: #D9393E;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+	html {
+        font-size: 15px;
+    }
+    .anu-container {
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 85%;
+		padding: 25px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

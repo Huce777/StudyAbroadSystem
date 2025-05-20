@@ -1,0 +1,166 @@
+/* style3.css */
+body {
+    background: url('../images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', '微软雅黑', sans-serif;
+}
+
+.reviewer-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    position: absolute;
+    top: 18%;
+    right: 8%;
+    width: 76%;
+    height: 70vh;
+}
+
+/* 左侧待审列表样式 */
+.pending-list {
+    background: rgba(255,255,255,0.96);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,75,150,0.1);
+}
+
+.application-list {
+    margin-top: 1.5rem;
+}
+
+.application-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e0e7f0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.application-item:hover {
+    transform: translateX(5px);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    filter: brightness(0.95);
+}
+
+.application-item.active {
+    border-color: #1a4580;
+    background: #f8f9fa;
+}
+
+.student-name {
+    color: #1a4580;
+    font-weight: 600;
+}
+
+.apply-date {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+.status-tag {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.status-pending { background: #fff3cd; color: #856404; }
+.status-review { background: #cce5ff; color: #004085; }
+.status-verified { background: #d4edda; color: #155724; }
+
+/* 右侧审核面板 */
+.review-panel {
+    background: rgba(255,255,255,0.96);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,75,150,0.1);
+}
+
+.material-preview {
+    height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-header {
+    border-bottom: 2px solid #e0e7f0;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.university-tag {
+    background: #1a4580;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-left: 1rem;
+}
+
+.document-list {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.document-item {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.preview-btn {
+    margin-left: auto;
+    background: #1a4580;
+    color: white;
+    padding: 4px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.review-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+    padding-top: 1.5rem;
+}
+
+.btn {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-approve {
+    background: #d4edda;
+    color: #155724;
+}
+
+.btn-reject {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+@media (max-width: 1200px) {
+    .reviewer-container {
+        grid-template-columns: 1fr;
+        width: 85%;
+        right: 5%;
+        height: auto;
+    }
+    
+    .material-preview {
+        height: 500px;
+    }
+}

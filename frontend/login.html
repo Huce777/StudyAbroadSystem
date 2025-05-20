@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳洲留学申请平台 - 登录</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>澳洲留学申请平台</h1>
+            <h2>Admissions Portal</h2>
+        </div>
+        
+        <form id="loginForm" class="login-form">
+            <div class="form-group">
+                <select id="role" name="role" class="form-control" required>
+                    <option value="">选择登录身份</option>
+                    <optgroup label="澳洲高校">
+                        <option value="ANU">澳洲国立大学</option>
+                        <option value="Sydney">悉尼大学</option>
+                        <option value="UNSW">新南威尔士大学</option>
+                    </optgroup>
+                    <optgroup label="国内机构">
+                        <option value="agent1">代理专员</option>
+                        <option value="reviewer">审查专员</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="username" name="username" 
+                       class="form-control" 
+                       placeholder="用户名"
+                       required>
+            </div>
+
+            <div class="form-group">
+                <input type="password" id="password" name="password"
+                       class="form-control"
+                       placeholder="密码"
+                       required minlength="6">
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">立即登录</button>
+                <button type="button" class="btn btn-link" 
+                        onclick="location.href='#forgot'">忘记密码？</button>
+            </div>
+        </form>
+
+        <div id="systemNotice" class="system-notice"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // 保持原有脚本逻辑不变
+		document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const role = document.getElementById('role').value;
+			const username = document.getElementById('username').value;
+			const password = document.getElementById('password').value;
+			
+			//简单的表单验证
+			if(!role || !username || !password){
+				document.getElementById('systemNotice').innerHTML = '请输入完整信息';
+				return ;
+			}
+			
+            switch(role) {
+                case 'ANU':
+                    window.location.href = 'school/anu.html';
+                    break;
+                case 'Sydney':
+                    window.location.href = 'school/sydney.html';
+                    break;
+                case 'UNSW':
+                    window.location.href = 'school/unsw.html';
+                    break;
+                case 'agent1':
+                    // 假设代理专员页面为 agent.html，需自行创建
+                    window.location.href = 'agent.html'; 
+                    break;
+                case 'reviewer':
+                    window.location.href = 'reviewer.html';
+                    break;
+                default:
+                    document.getElementById('systemNotice').innerHTML = '请选择登录身份';
+            }
+        });
+    </script>
+</body>
+</html>

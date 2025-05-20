@@ -1,0 +1,136 @@
+/* style4.css */
+/* body { */
+    /* background: url('../images/background.png') no-repeat center center fixed; */
+    /* background-size: cover; */
+    /* height: 100vh; */
+    /* margin: 0; */
+    /* font-family: 'Segoe UI', '微软雅黑', sans-serif; */
+/* } */
+body {
+    background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), 
+                url('../images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    height: 100vh;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, '微软雅黑', 'Microsoft YaHei', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+	letter-spacing: 0.1px;
+    color: #333;
+}
+
+.anu-container {
+    position: absolute;
+    top: 50%;
+    right: 18%;
+    transform: translateY(-50%);
+    width: 320px;
+    background: rgba(255,255,255,0.98);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(33, 87, 172, 0.15);
+    padding: 30px;
+	backdrop-filter:blur(5px);
+}
+
+.header-group {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.campus-logo {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #1a4580;
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+	letter-spacing: 0.5px;
+	font-weight: 600;
+}
+
+.stats-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.stat-box {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    padding: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #e0e7f0;
+    position: relative;
+}
+
+.stat-box::after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, transparent, rgba(138, 180, 248, 0.1));
+    z-index: -1;
+}
+
+.stat-value {
+    color: #1a4580;
+    font-size: 2rem;
+    font-weight: 650;
+    margin-bottom: 0.5rem;
+	letter-spacing: -0.5px
+}
+
+.stat-label {
+    color: #4a5568;
+    font-size: 0.95rem;
+	letter-spacing: 0.2px;
+}
+
+.stat-trend {
+    color: #4a8cff;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.priority-list h2 {
+    color: #dc3545;
+    font-size: 1.1rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.applicant-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    background: #fff5f5;
+    border-radius: 6px;
+    margin: 0.5rem 0;
+}
+
+.deadline {
+    color: #dc3545;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+	html {
+        font-size: 15px;
+    }
+    .anu-container {
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 85%;
+		padding: 25px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

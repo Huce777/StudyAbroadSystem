@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>综合管理控制台</title>
+    <!-- <link rel="stylesheet" href="../css/common.css"> -->
+    <link rel="stylesheet" href="../css/agent.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="admin-nav">
+        <div class="nav-brand">
+            <img src="../images/agency-logo.png" alt="管理平台标志">
+            <span>大学申请综合管理系统</span>
+        </div>
+        <div class="nav-links">
+            <a href="#real-time" class="active">实时监控</a>
+            <a href="#analytics">数据分析</a>
+            <a href="#settings">系统管理</a>
+        </div>
+    </nav>
+
+    <!-- 主仪表盘 -->
+    <main class="agent-dashboard">
+        <!-- 综合概览 -->
+        <section class="overview-grid">
+            <div class="summary-card anu">
+                <h3>澳洲国立大学</h3>
+                <div class="live-stats">
+                    <div class="stat">
+                        <span class="value">128</span>
+                        <span class="label">待审申请</span>
+                    </div>
+                    <div class="progress-circle" data-percent="75"></div>
+                </div>
+                <div class="urgent-alert">
+                    <span>⚠️ 2 项加急申请</span>
+                </div>
+				<a href="../school/anu.html">查看详情</a>
+            </div>
+
+            <div class="summary-card sydney">
+                <h3>悉尼大学</h3>
+                <div class="live-stats">
+                    <div class="stat">
+                        <span class="value">89</span>
+                        <span class="label">待处理</span>
+                    </div>
+                    <div class="progress-bar" style="width: 60%"></div>
+                </div>
+                <div class="faculty-distribution">
+                    <span>医学院 42</span>
+                    <span>工程学院 28</span>
+                </div>
+				<a href="../school/sydney.html">查看详情</a>
+            </div>
+
+            <div class="summary-card unsw">
+                <h3>新南威尔士大学</h3>
+                <div class="dual-stats">
+                    <div class="stat">
+                        <span class="value">72</span>
+                        <span class="label">待处理</span>
+                    </div>
+                    <div class="stat">
+                        <span class="value">135</span>
+                        <span class="label">已批准</span>
+                    </div>
+                </div>
+                <div class="notice-preview">
+                    <span>📌 系统维护通知</span>
+                    <span class="date">2025-05-10</span>
+                </div>
+				<a href="../school/unsw.html">查看详情</a>
+            </div>
+        </section>
+
+        <!-- 跨校比较 -->
+        <section class="comparison-chart">
+            <h2>申请处理效率对比</h2>
+            <div class="chart-container">
+                <canvas id="efficiencyChart"></canvas>
+            </div>
+        </section>
+
+        <!-- 待办事项 -->
+        <section class="global-tasks">
+            <h2>全局待办事项</h2>
+            <div class="task-list">
+                <div class="task-item critical">
+                    <span>#ANU20231002 加急申请</span>
+                    <span class="deadline">剩余4小时</span>
+                </div>
+                <div class="task-item">
+                    <span>季度报告生成</span>
+                    <span class="deadline">3天后到期</span>
+                </div>
+            </div>
+        </section>
+    </main>
+	
+	<a href="student.html">学生申请中心</a>
+	<a href="reviewer.html">资质审计中心</a>
+    <script src="../js/agent.js"></script>
+</body>
+</html>

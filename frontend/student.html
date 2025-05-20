@@ -1,0 +1,74 @@
+<!-- student.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生申请中心</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <div class="student-container">
+        <!-- 第一白色区域：基本信息 -->
+        <div class="info-card">
+            <h2 class="card-title"><span class="icon">📌</span> 申请概况</h2>
+            <div class="info-group">
+                <label>当前状态：</label>
+                <div class="status-progress">
+                    <div class="progress-bar" style="width: 65%"></div>
+                </div>
+                <span class="status-text">材料审核中</span>
+            </div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">申请院校：</div>
+                    <div class="info-value">悉尼大学</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">申请专业：</div>
+                    <div class="info-value">计算机科学</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二白色区域：材料上传 -->
+        <div class="upload-card">
+            <h2 class="card-title"><span class="icon">📤</span> 材料上传</h2>
+            <div class="upload-area">
+                <div class="upload-item completed">
+                    <div class="file-name">成绩单.pdf</div>
+                    <div class="file-status">✅ 已上传</div>
+                </div>
+                <div class="upload-item">
+                    <input type="file" id="recommendation" hidden>
+                    <label for="recommendation" class="upload-button">
+                        <span class="icon">➕</span> 推荐信
+                    </label>
+                    <div class="file-status">等待上传</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第三白色区域：时间线 -->
+        <div class="timeline-card">
+            <h2 class="card-title"><span class="icon">⏳</span> 申请时间线</h2>
+            <div class="timeline">
+                <div class="timeline-item active">
+                    <div class="timeline-date">2025.05.10</div>
+                    <div class="timeline-content">申请表格提交成功</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.05.10</div>
+                    <div class="timeline-content">初审材料通过</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.05.10</div>
+                    <div class="timeline-content">等待最终审核</div>
+                </div>
+            </div>
+        </div>
+		<a href="agent.html">返回综合管理控制台</a>
+		<a href="reviewer.html">资质审查中心</a>
+    </div>
+</body>
+</html>

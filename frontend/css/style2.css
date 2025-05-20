@@ -1,0 +1,135 @@
+/* style2.css */
+body {
+    background: url('../images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', '微软雅黑', sans-serif;
+    padding: 2rem;
+}
+
+.student-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    top: 15vh;
+}
+
+/* 通用卡片样式 */
+.info-card, .upload-card, .timeline-card {
+    background: rgba(255,255,255,0.96);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,75,150,0.1);
+    min-height: 400px;
+}
+
+.info-card:hover, .upload-card:hover, .timeline-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.card-title {
+    color: #1a4580;
+    font-size: 1.4rem;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* 进度条样式 */
+.status-progress {
+    height: 8px;
+    background: #e0e7f0;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #1a4580;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+/* 材料上传区域 */
+.upload-area {
+    border: 2px dashed #e0e7f0;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.upload-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.upload-button {
+    background: #1a4580;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.upload-button:hover {
+    transform: translateY(-2px);
+}
+
+/* 时间线样式 */
+.timeline {
+    position: relative;
+    padding-left: 20px;
+    margin-top: 1rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #e0e7f0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border: 2px solid #1a4580;
+    border-radius: 50%;
+}
+
+.timeline-item.active::before {
+    background: #1a4580;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .student-container {
+        grid-template-columns: 1fr;
+        top: 5vh;
+    }
+    
+    .info-card, .upload-card, .timeline-card {
+        min-height: auto;
+    }
+}
